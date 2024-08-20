@@ -12,8 +12,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F0F4F3;
+    background-image: url('assets/images/fondoinicio.webp');
+    background-size: cover; /* Ajusta el tamaño de la imagen para que se ajuste dentro del contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center center; /* Centra la imagen en el contenedor */
+    margin: 10;
+    padding: 10;
 }
+
 
 .container {
     width: 800px;
