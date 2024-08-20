@@ -33,12 +33,19 @@ if (isset($_POST['email']) && isset($_POST['contraseña'])) {
         
         // Verificar contraseña
         if (password_verify($password, $password_hash)) {
-            echo "<script>alert('Inicio de sesión exitoso.');</script>";
+            // Redirigir a index.html en caso de inicio de sesión exitoso
+            echo "<script>
+                    alert('BIENVENIDO A MCTREJM.');
+                    window.location.href = 'index.html';
+                  </script>";
         } else {
             echo "<script>alert('Contraseña incorrecta.');</script>";
         }
     } else {
-        echo "<script>alert('No existe un usuario con ese correo electrónico.');</script>";
+        echo "<script>
+        alert('No existe un usuario con ese correo electrónico.');
+        window.location.href = 'iniciarsesion.html';
+        </script>";
     }
 
     // Cerrar sentencia
